@@ -28,7 +28,7 @@
       </li>
       <div class="dropdown show">
         <% if current_user %>
-          <button type="button" class="btn btn-outline-primary"><%= link_to "Se déconnecter", destroy_user_session , method: :delete %></button>
+          <button type="button" class="btn btn-outline-primary"><%= link_to "Se déconnecter", session_path(session.id) , method: :delete %></button>
           <% else %>
           <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 S'inscrire / Se connecter</a>
