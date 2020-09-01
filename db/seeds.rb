@@ -5,11 +5,13 @@ Order.destroy_all
 
 
 i = 0
-20.times do
+20.times do |i|
+    number_photo = i + 200
+
     item = Item.create(title: Faker::Creature::Cat.name, 
     description: Faker::Lorem.paragraph, 
     price: rand(10...250),
-    image_url: ("db/cat/cat#{i+=1}.png")
+    image_url: "https://placekitten.com/200/#{number_photo}"
     )
     end
 puts "item ok"
