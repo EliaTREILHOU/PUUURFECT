@@ -68,9 +68,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'therubyracer'
 
 gem 'yarn'
-
-<<<<<<< HEAD
 gem 'dotenv'
-=======
 #gem 'therubyracer'
->>>>>>> master
