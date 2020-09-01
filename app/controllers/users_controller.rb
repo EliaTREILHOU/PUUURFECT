@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user.update(params.require(:user).permit(
       :first_name, :last_name, :description, :adress, :zipcode)
     )
-    redirect_to_user_path(@user)
+    redirect_to user_path(@user)
   end
 
 end
