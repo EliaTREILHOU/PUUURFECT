@@ -1,0 +1,45 @@
+.my-jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2017/07/11/18/07/market-2494520_960_720.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 370px;
+}
+
+.my-big_banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.pixabay.com/photo/2020/08/08/20/19/wave-5473869_960_720.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 600px;
+}
+
+<!--   Footer   -->
+
+#footer {
+  width: 100%;
+  height: 250px;
+  margin:5em 0
+  position: absolute;
+  bottom: 0;
+}
+
+#footer li {
+  float:left;
+  margin-right:1.5em;
+  margin-bottom:1.5em
+}
+
+#footer p {
+  clear:left;
+  margin-bottom:0
+}
+
+
+#body {
+  color: black;
+}

@@ -1,21 +1,17 @@
-<<<<<<< HEAD
-!
 
 
-=======
->>>>>>> 4997105634e5f480f463fffa7c9a54bfcbad65eb
 
 
 <h1 class="display-4-selection text-center my-5">Mon Profil</h1>
 
 
   <div class="row justify-content-center">
-    <div class="card border-primary mb-4" style="max-width: 15rem;">
+    <div class="card border-primary">
       <div class="card-header">
         <p class="h3 text-center"> <%= @user.first_name %> <%= @user.last_name %></p>
       </div>
       <div class="card-body text-primary">
-        <h5 class="card-title text-center">Mes informations</h5>
+        <h5 class="card-title text-center">------------ Mes informations ------------ </h5>
         <p class="card-text text-center"><span class="h6 text-center">Ma description:</span><br> <span class="ml-3 text-center"><%= @user.description %></span><br></p>
           <p class="card-text text-center"><span class="h6 text-center">Mon email:</span><br> <span class="ml-3 text-center" ><%= @user.email %></span><br></p><br>
           <p class="card-text text-center"><span class="h6 text-center">Mon adresse:</span><br> <span class="text-center"><%= @user.address %><br></span><br></p>
