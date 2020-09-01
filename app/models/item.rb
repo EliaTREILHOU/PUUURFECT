@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   has_many :orders, through: :order_items
 
   validates :title, presence: true
-  validates :description, presence: true, length { maximum: 200 }
+  validates :description, presence: true, length: { maximum: 200 }
   validates :price, presence: true, numericality: { only_integer: true }
   validates :image_url, presence: true
 end
