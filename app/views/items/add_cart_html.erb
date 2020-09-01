@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ajouter au Panier</title>
+</head>
+
+<body>
+<div class="product-container">
+  <div class="product">
+    <img class="product-img" src="<%= @item.order_items%>" alt="Card image">
+    <div class="product-body">
+        <h5 class="product-title"><%= @item.title%></h5>
+        <p class="product-text"><%= @item.description %></p>
+        <p class="product-price"><small class="text-muted"><%= @item.price%> €</small></p>
+      <% if user_sign_in? %>
+          <%= link_to "Ajouter au panier", root_path, class: "show-button" %>
+      <% end %>
+    </div>
+  </div>
+
+</body>
+</html>
