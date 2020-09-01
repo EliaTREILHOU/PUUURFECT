@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Puuurfect</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <head>
+        <title>Puuurfect</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  </head>
+    </head>
 
   
-<header>
-<!-----NAVBAR------>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">PUUURFECT</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <header>
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">La Team</a>
-      </li>
-      <span>
+        <!-----NAVBAR------>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <a class="navbar-brand" href="#">PUUURFECT</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
 
-        <% if user_signed_in? %>
-        <div class="dropdown show">
-          <button type="button" class="btn btn-outline-primary"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></button>
-          <button type="button" class="btn btn-outline-primary"><%= link_to "Voir mon profil", user_path(:id => current_user.id) %></button> 
-          <% end %>
-          <% if !user_signed_in? %>
-          <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                S'inscrire / Se connecter</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <%= link_to "S'inscrire", new_user_registration_path, :class => "dropdown-item" %>
-                <%= link_to "Se connecter", new_user_session_path, :class => "dropdown-item" %>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">La Team</a>
+                      </li>
+                      <span>
+
+                      <% if user_signed_in? %>
+                          <div class="dropdown show">
+                              <button type="button" class="btn btn-outline-primary"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></button>
+                              <button type="button" class="btn btn-outline-primary"><%= link_to "Voir mon profil", user_path(:id => current_user.id) %></button> 
+                      <% end %>
+                      <% if !user_signed_in? %>
+                          <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S'inscrire / Se connecter</a>
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                  <%= link_to "S'inscrire", new_user_registration_path, :class => "dropdown-item" %>
+                                  <%= link_to "Se connecter", new_user_session_path, :class => "dropdown-item" %>
+                              </div>
+                      <% end %>
+                  </ul>
               </div>
-        <% end %>
-
-        </div>
-    </ul>
-  </div>
-</nav>
-</header>
+        </nav>
+    </header>
 <body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -63,9 +61,7 @@
       
 <!-------FOOTER------->      
 
-  <body>
-<%= yield%>
-  </body>
+
   
   <footer class="container fixed-bottom" id="footer">
     <div class="row">
