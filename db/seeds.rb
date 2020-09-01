@@ -20,3 +20,19 @@ puts "item ok"
     )
 end
 puts "order ok"
+
+5.times do |x|
+    user = User.create!(
+      first_name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      description: Faker::Lorem.paragraph,
+      email: Faker::Name.first_name + "@test.com",
+      password: "123456",
+      password_confirmation: "123456",
+      address: Faker::Address.street_address,
+      zipcode: Faker::Address.zip_code,
+      is_admin: false
+    )
+  
+
+end

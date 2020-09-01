@@ -30,7 +30,7 @@ gem 'devise'
 gem 'table_print'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # gem 'simple_form'
-gem 'stripe'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
