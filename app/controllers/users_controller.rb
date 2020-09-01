@@ -11,9 +11,9 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     @user.update(params.require(:user).permit(
-      :first_name, :last_name, :description, :adress, :zipcode)
+      :first_name, :last_name, :description, :address, :zipcode)
     )
-    redirect_to_user_path(@user)
+    redirect_to user_path(@user)
   end
 
 end

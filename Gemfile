@@ -69,4 +69,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'yarn'
 
-gem 'therubyracer'
+#gem 'therubyracer'
