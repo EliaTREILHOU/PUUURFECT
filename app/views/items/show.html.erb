@@ -31,7 +31,7 @@
       <p class="card-text"><%= @item.description %></p>
       <h4 class="product-price"><small class="text-muted"><%= @item.price%> €</small></h4>
       <% if user_signed_in? %>
-          <%= link_to "Ajouter au panier", root_path, class: "show-button"%>
+          <%= link_to "Ajouter au panier", cart_items_path(item_id: @item.id), method: :post, class: "show-button"%>
       <% end %>
     </div>
     </div>

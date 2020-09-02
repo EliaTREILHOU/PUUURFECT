@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources 'carts', only: [:show]
+  resources 'cart_items'
   namespace :admin do
       resources :users
       resources :carts

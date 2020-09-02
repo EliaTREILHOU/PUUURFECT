@@ -38,6 +38,7 @@
                           <div class="dropdown show">
                               <button type="button" class="btn btn-outline-primary"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></button>
                               <button type="button" class="btn btn-outline-primary"><%= link_to "Voir mon profil", user_path(:id => current_user.id) %></button> 
+                              <button type="button" class="btn btn-outline-primary"><%= link_to "Voir mon panier", cart_path(current_user.cart.id) %></button> 
                       <% end %>
                       <% if !user_signed_in? %>
                           <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S'inscrire / Se connecter</a>
