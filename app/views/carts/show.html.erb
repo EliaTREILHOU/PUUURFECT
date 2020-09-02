@@ -1,16 +1,17 @@
-<h3 class="cute_kittens text-center"> Ton panier : </h3><br>
+<br>
+<h3 class="mycart text-center"> Ton panier : </h3><br>
 
 <div class="container">
-  <div class="row">
-    <% @cartitems.each do |element| %>
+
+    <% @cart_items.each do |element| %>
 
         <p><%= element.item.title %></p>
         <p><%= element.item.image_url %></p>
-        <p><%= element.item.price %></p>
+        <p><%= element.item.price %> </p>
 
 
 
      
     <% end %>
-  </div>
+
 </div>
