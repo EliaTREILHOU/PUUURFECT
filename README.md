@@ -1,1 +1,1 @@
-https://git.heroku.com/puuuurfect.git
+https://git.heroku.com/puuurfect.git

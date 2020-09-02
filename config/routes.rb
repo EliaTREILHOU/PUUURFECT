@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources 'carts', only: [:show]
   resources 'cart_items'
+  root 'items#index'
   namespace :admin do
       resources :users
       resources :carts
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
-  root 'items#index'
+  
   # Below : Devise
   devise_for :users
   resources 'items'

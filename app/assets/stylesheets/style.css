@@ -1,3 +1,6 @@
+body {
+  background-image: url("https://cdn.discordapp.com/attachments/745666445072924812/750369851670790183/background_chat.png")
+}
 
 .my-jumbotron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2017/07/11/18/07/market-2494520_960_720.jpg');
