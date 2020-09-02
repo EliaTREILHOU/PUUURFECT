@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <!------JUMBOTRON------>
+
+  <section>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">PUUURFECT</h1>
+        <h2 class="h3 mb-3">Des images qui vous feront ronronner de bonheur !</h2>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container"
+
+
+  <div class="card border-primary md-8" style="max-width: 80%;">
+    <div class="card-header"><img src="<%= @item.image_url %>" class="element_picture" alt="kitty kitty"></div>
+    <div class="card-body">
+      <h3 class="card-title"><%= @item.title%></h3>
+      <p class="card-text"><%= @item.description %></p>
+      <h4 class="product-price"><small class="text-muted"><%= @item.price%> €</small></h4>
+      <% if user_signed_in? %>
+          <%= link_to "Ajouter au panier", root_path, class: "show-button"%>
+      <% end %>
+    </div>
+    </div>
+  </div>
+
+  
+</div>
+
+</body>
+</html>
