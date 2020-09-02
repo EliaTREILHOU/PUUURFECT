@@ -11,7 +11,14 @@
       <div class="card-header">
         <p class="h3 text-center"> <%= @user.first_name %> <%= @user.last_name %></p>
       </div>
-      
+
+      <h3 class="text-center">Votre photo de profil</h3>
+          <%if @user.avatar.attached?%>
+            <%= image_tag @user.avatar, alt: 'avatar' %>
+          <%else%>
+            <p>=== Vous n'avez pas encore de photo de profil ===</p>
+          <%end%> 
+
       <div class="card-body text-primary">
         <h5 class="card-title text-center">------------ Mes informations ------------ </h5>
         <p class="card-text text-center"><span class="h6 text-center">Ma description:</span><br> <span class="ml-3 text-center"><%= @user.description %></span><br></p>

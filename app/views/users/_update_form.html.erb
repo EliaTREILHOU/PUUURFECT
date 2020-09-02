@@ -1,3 +1,15 @@
+<div class ="container col-7">
+<div class="row judstify-center">
+
+<%= form_tag user_avatars_path(@user), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "Ajoutez votre photo" %>
+<% end %>
+</div>
+</div>
+<br>
+
+
 <%= form_with(model: user, local: true, method: :put) do |update| %>
 
   <div class="form-group">
@@ -7,7 +19,6 @@
   <div class="form-group">
     <%= update.text_field :last_name, class:"form-control", placeholder:"Nom" %>
   </div>
-
 
   <div class="form-group">
     <%= update.email_field :email, class:"form-control", placeholder:"email" %>
@@ -29,3 +40,4 @@
     <button type="submit" class="btn btn-primary">Editer mes informations</button>
   </div>
 <% end %>
+
