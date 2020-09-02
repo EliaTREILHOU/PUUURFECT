@@ -27,4 +27,10 @@
   <div class="actions text-center">
     <button type="submit" class="btn btn-primary">Editer mes informations</button>
   </div>
+
+  <%= form_tag do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "Ajouter ma photo de profil" %>
+  <% end %> 
+
 <% end %>
