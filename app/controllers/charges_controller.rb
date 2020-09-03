@@ -1,7 +1,7 @@
 class ChargesController < ApplicationController
   
   def new
-    @cart = Cart.find(params[:cart_id])
+    @cart = Cart.find_by(user_id: current_user.id)
     @cart_item = CartItem.where(cart_id: params[:cart_id])
     @total_price = 0
     @cart_item.each do |element|
@@ -11,7 +11,7 @@ class ChargesController < ApplicationController
   
   def create
     # Amount in cents
-    @cart = Cart.find(params[:cart_id])
+    @cart = Cart.find_by(user_id: current_user.id)
     @cart_item = CartItem.where(cart_id: params[:cart_id])
     @price_to_pay = 0
     @cart_item.each do |element|
