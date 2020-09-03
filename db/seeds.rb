@@ -4,6 +4,7 @@ Item.destroy_all
 Order.destroy_all
 
 
+
 i = 0
 20.times do |i|
     number_photo = i + 200
