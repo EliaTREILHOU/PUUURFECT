@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/index'
   resources 'carts', only: [:show]
   resources 'cart_items'
   root 'items#index'
@@ -24,4 +25,7 @@ Rails.application.routes.draw do
   
   #Below : Stripe
   resources :charges
+
+  #Static_Pages
+  resources :static_pages
 end

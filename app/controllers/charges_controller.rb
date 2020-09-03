@@ -1,10 +1,12 @@
 class ChargesController < ApplicationController
+  
   def new
   end
   
   def create
     # Amount in cents
-    @amount = 500
+    @cart = current_user.cart
+    @amount = (total_price * 100)
   
     customer = Stripe::Customer.create({
       email: params[:stripeEmail],
@@ -15,8 +17,10 @@ class ChargesController < ApplicationController
       customer: customer.id,
       amount: @amount,
       description: 'Rails Stripe customer',
-      currency: 'usd',
+      currency: 'eur',
     })
+
+    Order.create(stripe_customer_id: customer.id, user_id: current_user.id)
   
   rescue Stripe::CardError => e
     flash[:error] = e.message

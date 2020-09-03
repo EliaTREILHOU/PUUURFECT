@@ -286,3 +286,26 @@ ol {
 .rating li i {
   color: red;
 }
+
+#contact {
+  background-color: #f1f1f1;
+}
+
+#contact .well {
+  margin-top: 30px;
+  border-radius: 0;
+}
+
+#contact .form-control {
+  border-radius: 0;
+  border: 2px solid #1e1e1e;
+}
+
+#contact button {
+  border-radius: 0;
+  border: 2px solid #1e1e1e;
+}
+
+#contact .row {
+  margin-bottom: 30px;
+}

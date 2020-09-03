@@ -14,6 +14,7 @@ class CartsController < ApplicationController
     @cart_items.each do |element|
       @total_price = element.item.price  + @total_price
     end
+    
   end
 
   def is_your_cart

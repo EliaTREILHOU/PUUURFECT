@@ -9,6 +9,16 @@ class ApplicationController < ActionController::Base
       end
     end
     
+    def pricetopay
+      @cart = Cart.find(params[:id])
+  
+      @cart_items = CartItem.where(cart_id: params[:id])
+      
+      @total_price = 0
+      @cart_items.each do |element|
+        @total_price = element.item.price  + @total_price
+      end
+    end
     protected
   
     def configure_permitted_parameters
