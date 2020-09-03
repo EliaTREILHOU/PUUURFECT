@@ -1,3 +1,3 @@
 Lien vers app Heroku :
 
-https://puuurfect.herokuapp.com
+https://puuur2fect.herokuapp.com
