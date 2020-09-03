@@ -20,25 +20,44 @@
     </div>
   </section>
 
-
-  <div class="container"
-
-
-  <div class="card border-primary md-8" style="max-width: 80%;">
-    <div class="card-header"><img src="<%= @item.image_url %>" class="element_picture" alt="kitty kitty"></div>
-    <div class="card-body">
-      <h3 class="card-title"><%= @item.title%></h3>
-      <p class="card-text"><%= @item.description %></p>
-      <h4 class="product-price"><small class="text-muted"><%= @item.price%> €</small></h4>
-      <% if user_signed_in? %>
-          <%= link_to "Ajouter au panier", cart_items_path(item_id: @item.id), method: :post, class: "show-button"%>
-      <% end %>
-    </div>
-    </div>
+  <div class="container" style="max-width: 60%">
+      <div class="card border-primary mb-3">
+      <div class="card-header"></div>
+        <div class="card-body">
+          <div class="wrapper row justify-center">
+              <div class="preview col-md-6">
+                  <div class="tab-pane active justify-left" id="pic-1"><img src="<%= @item.image_url %>"/></div>
+              </div>						
+              <div class="details col-md-6">
+                  <h3 class="product-title"><%= @item.title%></h3>
+                    <br>
+                  <p class="product-description"><%= @item.description %></p>
+                    <br>
+                    <br>
+                  <h4 class="price text-muted"><%= @item.price%> €</h4>
+                    <br>
+                    <br>
+                  <% if user_signed_in? %>
+                    <button class="btn btn-lg btn-success text-uppercase position-center" width="50px"><%= link_to "Ajouter au panier", cart_items_path(item_id: @item.id), method: :post, class: "show-button"%></button>
+                  <% end %>  
+              </div>
+          </div>
+          <div class="container">
+          <% if !user_signed_in? %>
+            <h6>Envie d'ajouter ce chaton à votre panier? <%= link_to "Inscrivez-vous", new_user_registration_path %> ou <%= link_to "Connectez-vous", new_user_session_path %> à votre compte utilisateur sans plus tarder à votre compte utilisateur!<h6>
+          <% end %>
+          </div>
+        </div>
+      </div>
   </div>
 
-  
-</div>
+<br>
+<br>
+</br>
 
-</body>
+
+
+<br>
+<br>
+</br>
 </html>

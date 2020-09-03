@@ -2,8 +2,18 @@ body {
   background-image: url("https://cdn.discordapp.com/attachments/745666445072924812/750369851670790183/background_chat.png")
 }
 
+html,
+body {
+  height: 100%;
+}
 
+#page-content {
+  flex: 1 0 auto;
+}
 
+#sticky-footer {
+  flex-shrink: none;
+}
 .my-jumbotron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2017/07/11/18/07/market-2494520_960_720.jpg');
   background-position: center;
@@ -25,12 +35,16 @@ body {
 }
 
 
+#body {
+  color: black;
+  padding-bottom; 60px;
+  min-height: 100vh;
+}
 
 #footer {
   width: 100%;
- 
- 
   bottom: 0;
+  background-color: white;
 }
 
 #footer li {
@@ -45,6 +59,238 @@ body {
 }
 
 
-#body {
-  color: black;
+#card-index {
+    overflow: hidden;
+    display: flex;
+    margin: 10px;
+    border: 2px solid #673AB7
+}
+
+.index-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex
+}
+
+a,
+.btn {
+    transition: all 0.3s ease-out 0s
+}
+
+a {
+    color: #333;
+    text-decoration: none !important
+}
+
+h4 {
+    margin-bottom: 0px !important
+}
+
+.mb-10 {
+    margin-bottom: 10px
+}
+
+.htcatthumb a img {
+    width: 100%
+}
+
+p+img,
+img:last-child {
+    margin-bottom: 0
+}
+
+.frhoverinfo {
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+
+.ml-text {
+    margin-left: -44px
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+
+#card-index:hover {
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInRight;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInRight;
+    opacity: 1;
+    transition: opacity 300ms linear 0s
+}
+
+#card-index:hover {
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    opacity: 1;
+    transition: opacity 500ms linear 0s
+}
+
+#card-index:hover {
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    opacity: 1;
+    transition: opacity 500ms linear 0s
+}
+
+#card-index:hover .frproductinner.innerposition {
+    bottom: 0;
+    opacity: 1
+}
+
+.frproductinner.innerposition {
+    background: #fff none repeat scroll 0 0;
+    bottom: -20px;
+    left: 0;
+    opacity: 0;
+    padding: 30px 20px;
+    position: absolute;
+    text-align: left;
+    transition: all 0.5s ease 0s;
+    width: 100%
+}
+
+.frproductinner h4 a {
+    color: black;
+    transition: all 0.3s ease 0s
+}
+
+.innerposition .frproprize {
+    float: left;
+    justify-content: flex-start
+}
+
+
+.innerposition .frproprize {
+    margin-top: 0
+}
+
+.innerposition .rating {
+    display: flex;
+    float: right
+}
+
+
+.index-container {
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+a,
+.btn {
+    transition: all 0.3s ease-out 0s
+}
+
+a {
+    color: #333;
+    text-decoration: none !important
+}
+
+h4 {
+    margin-bottom: 0px !important
+}
+
+.mb-10 {
+    margin-bottom: 10px
+}
+
+.htcatthumb a img {
+    width: 100%
+}
+
+p+img,
+img:last-child {
+    margin-bottom: 0
+}
+
+.frhoverinfo {
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+
+.ml-text {
+    margin-left: -44px
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+
+#card-index:hover {
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInRight;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInRight;
+    opacity: 1;
+    transition: opacity 300ms linear 0s
+}
+
+#card-index:hover {
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    opacity: 1;
+    transition: opacity 500ms linear 0s
+}
+
+#card-index:hover {
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInRight;
+    opacity: 1;
+    transition: opacity 500ms linear 0s
+}
+
+#card-index:hover .frproductinner.innerposition {
+    bottom: 0;
+    opacity: 1
+}
+
+.frproductinner.innerposition {
+    background: #fff none repeat scroll 0 0;
+    bottom: -20px;
+    left: 0;
+    opacity: 0;
+    padding: 30px 20px;
+    position: absolute;
+    text-align: left;
+    transition: all 0.5s ease 0s;
+    width: 100%
+}
+
+.frproductinner h4 a {
+    color: black;
+    transition: all 0.3s ease 0s
+}
+
+.innerposition .frproprize {
+    float: left;
+    justify-content: flex-start
+}
+
+.frproprize {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px
+}
+
+
+
+.innerposition .frproprize {
+    margin-top: 0
+}
+
+.innerposition .rating {
+    display: flex;
+    float: right
+}
+
+.rating li i {
+    color: red
 }
