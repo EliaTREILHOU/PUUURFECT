@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources 'carts', only: [:show]
+  resources 'cart_items'
   root 'items#index'
   namespace :admin do
       resources :users

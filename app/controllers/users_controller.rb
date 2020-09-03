@@ -17,4 +17,12 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+
+  def is_owner?
+    if current_user.id.to_i != params[:id].to_i
+      flash[:danger] = "Vous ne pouvez pas acceder à cette page"
+      redirect_to root_path
+    end
+  end
+
 end

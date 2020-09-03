@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 2f447f6e71c3df4d20fb5d6aad2d1ef4c4784951
+  revision: b194dd23bb4cf9f151e6f680e1ea243737d747e1
   branch: master
   specs:
     faker (2.13.0)
@@ -177,7 +177,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.2.3)
-    public_suffix (4.0.5)
+    public_suffix (4.0.6)
     puma (3.12.6)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -306,7 +306,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.1.4

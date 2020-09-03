@@ -1,0 +1,81 @@
+<br>
+<h1 class="mycart text-center"> Mon panier </h1><br>
+
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Produit</th>
+                            <th scope="col">Disponibilité</th>
+                            <th scope="col" class="text-center">Quantité</th>
+                            <th scope="col" class="text-right">Prix</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <% @cart_items.each do |element| %>
+                    <tbody>
+                        <tr>
+                            <td><img src=<%= element.item.image_url %> /> </td>
+                            <td class="text-left"><%= element.item.title %></td>
+                            <td>En stock</td>
+                            <td class="form-group">
+                                <select class="form-control" id="exampleSelect1">
+                                    <option class="text-right">1</option>
+                                    <option class="text-right">2</option>
+                                    <option class="text-right">3</option>
+                                    <option class="text-right">4</option>
+                                    <option class="text-right">5</option>
+                                </select>
+                            </td>
+                            <td class="text-right"><%= element.item.price %> €</td>
+                            <td class="text-right"><button class="btn btn-rounded-circle btn-danger btn-sm"><i class="fa fa-trash"></i> <%= link_to "Supprimer", cart_items_path(cart_id: @cart.id), method: :delete, data: { confirm: "Tu es sûr de ne plus vouloir ce chaton mignon ?" } %></button> </td>
+                        </tr>
+                        <% end %>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sous-Total</td>
+                            <td class="text-right"><%= @total_price %> €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Livraison</td>
+                            <td class="text-right">Gratuite</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong><%= @total_price %> €</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light"><%= link_to "Continuer mon shopping", root_path %></button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase">Régler ma commande</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
