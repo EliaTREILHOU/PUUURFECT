@@ -6,12 +6,6 @@ GIT
     faker (2.13.0)
       i18n (>= 1.6, < 2)
 
-GIT
-  remote: https://github.com/stripe/stripe-ruby
-  revision: e1ae307e603cd5a618f73f394119942a1539571e
-  specs:
-    stripe (5.24.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -233,6 +227,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (5.25.0)
     table_print (1.5.7)
     thor (1.0.1)
     thread_safe (0.3.6)
@@ -280,7 +275,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  stripe!
+  stripe
   table_print
   turbolinks (~> 5)
   tzinfo-data

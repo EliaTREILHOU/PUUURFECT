@@ -2,7 +2,7 @@ require 'faker'
 
 Item.destroy_all
 Order.destroy_all
-
+CartItem.destroy_all
 
 i = 0
 20.times do |i|
