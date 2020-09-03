@@ -6,12 +6,6 @@ GIT
     faker (2.13.0)
       i18n (>= 1.6, < 2)
 
-GIT
-  remote: https://github.com/stripe/stripe-ruby
-  revision: e1ae307e603cd5a618f73f394119942a1539571e
-  specs:
-    stripe (5.24.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -75,7 +69,7 @@ GEM
     autoprefixer-rails (9.8.6.3)
       execjs
     aws-eventstream (1.1.0)
-    aws-partitions (1.363.0)
+    aws-partitions (1.364.0)
     aws-sdk-core (3.105.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -90,7 +84,7 @@ GEM
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.2.2)
       aws-eventstream (~> 1, >= 1.0.2)
-    bcrypt (3.1.15)
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -250,6 +244,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (5.25.0)
     table_print (1.5.7)
     thor (1.0.1)
     thread_safe (0.3.6)
@@ -298,7 +293,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  stripe!
+  stripe
   table_print
   turbolinks (~> 5)
   tzinfo-data
@@ -306,7 +301,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.1.4

@@ -32,10 +32,11 @@
                                     <option class="text-right">5</option>
                                 </select>
                             </td>
-                            <td class="text-right"><%= element.item.price %> €</td>
-                            <td class="text-right"><button class="btn btn-rounded-circle btn-danger btn-sm"><i class="fa fa-trash"></i> <%= link_to "Supprimer", cart_items_path(cart_id: @cart.id), method: :delete, data: { confirm: "Tu es sûr de ne plus vouloir ce chaton mignon ?" } %></button> </td>
+                          
+                            <td class="text-right"><%= element.item.price %> * <%= element.quantity %> €</td>
+                            <td class="text-right"><button class="btn btn-rounded-circle btn-danger btn-sm"><i class="fa fa-trash"></i> <%= link_to "Supprimer", cart_item_path(cart_id: @cart.id, item_id: @item_id), method: :delete, data: { confirm: "Tu es sûr de ne plus vouloir ce chaton mignon ?" } %></button> </td>
                         </tr>
-                        <% end %>
+                    <% end %>
                         <tr>
                             <td></td>
                             <td></td>
